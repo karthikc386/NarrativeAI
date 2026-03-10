@@ -1,0 +1,17 @@
+{
+  "functions": {
+    "source": ".",
+    "runtime": "nodejs20",
+    "codebase": "default",
+    "ignore": [
+      "node_modules",
+      ".git",
+      "firebase-debug.log",
+      "firebase-functions-debug.log"
+    ]
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}

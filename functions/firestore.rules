@@ -1,0 +1,25 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Allow anyone to create events (for client SDK)
+    // In production, require authentication or set API key restrictions
+    match /events/{eventId} {
+      allow create: if request.resource.data.keys().hasAll(['sessionId', 'eventType', 'timestamp']);
+      allow read, write: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+
+    // Session stories - readable by authenticated users, writable only by Cloud Functions
+    match /sessionStories/{sessionId} {
+      allow read: if request.auth != null;
+      allow create, update: if request.auth.uid == 'cloud-function-service-account';
+      allow delete: if request.auth != null && request.auth.token.admin == true;
+    }
+
+    // Debug collection for testing (remove in production)
+    match /debug/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
