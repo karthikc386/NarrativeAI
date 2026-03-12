@@ -42,7 +42,7 @@ NarrativeAI/
 │   ├── ARCHITECTURE.md             # System architecture
 │   └── EXAMPLE_DOCUMENTS.js        # Firestore test data
 │
-├── INTEGRATION_EXAMPLE.html        # Complete working example
+├── UserSessionAnalyzer.html        # Complete working example
 └── README.md                       # This file
 ```
 
@@ -149,7 +149,7 @@ Look in `sessionStories` collection → You'll see auto-generated story! ✨
 
 ### Integration
 
-[See complete working example](INTEGRATION_EXAMPLE.html)
+[See complete working example](UserSessionAnalyzer.html)
 
 ## 🏗️ System Architecture
 
@@ -400,14 +400,14 @@ For detailed information:
 - [Client Library Docs](tracker/README.md)
 - [Function Docs](functions/README.md)
 - [Deployment Guide](functions/DEPLOYMENT_GUIDE.md)
-- [Example Code](INTEGRATION_EXAMPLE.html)
+- [Example Code](UserSessionAnalyzer.html)
 - [Firestore Test Data](functions/EXAMPLE_DOCUMENTS.js)
 
 ## 🎓 Learning Resources
 
 1. **Getting Started**: Read [QUICK_START.md](functions/QUICK_START.md)
 2. **Deep Dive**: Read [functions/README.md](functions/README.md)
-3. **Integration**: Check [INTEGRATION_EXAMPLE.html](INTEGRATION_EXAMPLE.html)
+3. **Integration**: Check [UserSessionAnalyzer.html](UserSessionAnalyzer.html)
 4. **Deployment**: Follow [DEPLOYMENT_GUIDE.md](functions/DEPLOYMENT_GUIDE.md)
 
 ## 📝 License
